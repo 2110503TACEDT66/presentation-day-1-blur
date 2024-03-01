@@ -8,7 +8,7 @@ const connectDB = require('./config/db');
 dotenv.config ({path:'./config/config.env'});
 
 //Route file
-const hospitals = require('./routes/hospitals');
+const dentists = require('./routes/dentists');
 const auth = require('./routes/auth');
 const appointments = require('./routes/appointments');
 
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 //Body parser
-app.use('/api/v1/hospitals', hospitals);
+app.use('/api/v1/dentists', dentists);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/appointments', appointments);
 
