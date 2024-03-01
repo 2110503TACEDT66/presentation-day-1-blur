@@ -3,39 +3,51 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const UserSchema = new mongoose.Schema({
-  name:{
-    type:String,
-    required:[true, 'Please add a name']
-  },
-  
-  email:{
-    type:String,
-    required:[true, 'Please add an email'],
-    unique : true,
-    match: [
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      ,'Please add a valid email'
-    ] 
+  name: {
+    type: String,
+    required: [true, "Please add a name"],
   },
 
-  role:{
-    type:String,
-    enum:['user', 'admin'],
-    default: 'user'
+  tel: {
+    type: String,
+    validate: {
+      validator: (value) => {
+        // Regular expression to match phone numbers starting with 0, followed by 7 to 10 digits
+        const regex = /^0\d{7,10}$/;
+        return regex.test(value);
+      },
+      message:
+        "Invalid phone number format. Must start with 0 and be 8-11 digits long.",
+    },
+  },
+  email: {
+    type: String,
+    required: [true, "Please add an email"],
+    unique: true,
+    match: [
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      "Please add a valid email",
+    ],
+  },
+
+  role: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user",
   },
 
   password: {
-    type:String,
-    required:[true, 'Please add a password'],
+    type: String,
+    required: [true, "Please add a password"],
     minlength: 6,
-    select: false
+    select: false,
   },
-  resetPasswordToken:String,
-  resetPasswordExpire:Date,
-  createdAt:{
-      type: Date,
-      default:Date.now
-  }
+  resetPasswordToken: String,
+  resetPasswordExpire: Date,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 //Encrypt password using bcrypt

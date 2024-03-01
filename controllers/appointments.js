@@ -1,5 +1,5 @@
 const Appointment  = require('../models/Appointment'); // require ติดต่อผ่านฐานข้อมูล
-const Hospital = require('../models/Hospital');
+const Hospital = require('../models/Dentist');
 
 
 //@desc Get all appointments
