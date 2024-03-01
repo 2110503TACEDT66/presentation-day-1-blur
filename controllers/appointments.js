@@ -1,5 +1,5 @@
 const Appointment  = require('../models/Appointment'); // require ติดต่อผ่านฐานข้อมูล
-const Hospital = require('../models/Dentist');
+const Dentists = require('../models/Dentist');
 
 
 //@desc Get all appointments
@@ -9,19 +9,19 @@ exports.getAppointments =async(req, res, next) => {
     let query;
     if(req.user.role !== 'admin'){ //General users can see only their appointments!\
       query = Appointment.find({user:req.user.id}).populate({
-        path:'hospital',
+        path:'dentist',
         select:'name province tel'
       });
     }else{// If you are an admin, you can see all appointment!
-      if(req.params.hospitalId){
-        console.log(req.params.hospitalId);
-        query = Appointment.find({hospital:req.params.hospitalId}).populate({
-          path:"hospital",
+      if(req.params.dentistId){
+        console.log(req.params.dentistId);
+        query = Appointment.find({dentist:req.params.dentistId}).populate({
+          path:"dentist",
           select:"name province tel",
         });
       }else{
         query = Appointment.find().populate({
-          path:'hospital',
+          path:'dentist',
           select:'name province tel'
         });
       } 
@@ -46,7 +46,7 @@ exports.getAppointments =async(req, res, next) => {
 exports.getAppointment = async(req, res, next) => {
   try {
     const appointment = await Appointment.findById(req.params.id).populate({
-      path: 'hospital',
+      path: 'dentist',
       select: 'name description tel'
     });
     if(!appointment){
@@ -61,23 +61,23 @@ exports.getAppointment = async(req, res, next) => {
 };
 
 //@desc Add appointment 
-//@route POST / api/v1/hospitals/:hospitalId/appointment
+//@route POST / api/v1/dentists/:dentistId/appointment
 //@access Private
 exports.addAppointment = async(req,res,next)=> {
   try {
-    req.body.hospital = req.params.hospitalId;
-    const hospital = await Hospital.findById(req.params.hospitalId);
+    req.body.dentist = req.params.dentistId;
+    const dentist = await Dentists.findById(req.params.dentistId);
 
-    if(!hospital){
+    if(!dentist){
       return res.status(404).json({success:false, 
-        message: `No hospital with the id of ${req.params.hospitalId}`});
+        message: `No dentist with the id of ${req.params.dentistId}`});
     }
     // add user Id to req.body
     req.body.user = req.user.id;
     //Check for existed appointment
     const existedAppointments = await Appointment.find({user:req.user.id});
     //If the user is not an admin, they can only create 3 appointment
-    if(existedAppointments.length >= 3 && req.user.role !== 'admin'){
+    if(existedAppointments.length >= 1 && req.user.role !== 'admin'){
       return res.status(400).json({success:false, 
         message: `The user with ID ${req.user.id} has already made 3 appointments`});
     }
