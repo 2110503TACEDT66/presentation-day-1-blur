@@ -10,14 +10,12 @@ const UserSchema = new mongoose.Schema({
 
   tel: {
     type: String,
-    validate: {
-      validator: (value) => {
-        const regex = /^0\d{2}[\s.-]?\d{3}[\s.-]?\d{4}$/;
-        return regex.test(value);
-      },
-      message:
-        "Invalid phone number format. Must start with 0 and be 10 digits long.",
-    },
+    require: [true, "Please add an tel"],
+    unique: true,
+    match: [
+      /^0\d{2}[\s.-]?\d{3}[\s.-]?\d{4}$/,
+      "Please add a valid tel"
+    ]
   },
   email: {
     type: String,

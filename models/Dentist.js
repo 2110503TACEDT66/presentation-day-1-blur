@@ -12,7 +12,7 @@ const DentistSchema = new mongoose.Schema(
       maxlength: [50, "Name can not be more than 50 characters"],
     },
     yearsOfExperience: {
-      type: Int32,
+      type: Number,
       required: [true, "Please add the years of experience"],
       max: 50, // กำหนดค่าสูงสุด
     },
