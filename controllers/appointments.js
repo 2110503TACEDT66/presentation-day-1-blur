@@ -10,19 +10,19 @@ exports.getAppointments =async(req, res, next) => {
     if(req.user.role !== 'admin'){ //General users can see only their appointments!\
       query = Appointment.find({user:req.user.id}).populate({
         path:'dentist',
-        select:'name province tel'
+        select:'name yearsOfExperience areaOfExpertise'
       });
     }else{// If you are an admin, you can see all appointment!
       if(req.params.dentistId){
         console.log(req.params.dentistId);
         query = Appointment.find({dentist:req.params.dentistId}).populate({
           path:"dentist",
-          select:"name province tel",
+          select:"name yearsOfExperience areaOfExpertise",
         });
       }else{
         query = Appointment.find().populate({
           path:'dentist',
-          select:'name province tel'
+          select:'name yearsOfExperience areaOfExpertise'
         });
       } 
     }
@@ -79,7 +79,7 @@ exports.addAppointment = async(req,res,next)=> {
     //If the user is not an admin, they can only create 3 appointment
     if(existedAppointments.length >= 1 && req.user.role !== 'admin'){
       return res.status(400).json({success:false, 
-        message: `The user with ID ${req.user.id} has already made 3 appointments`});
+        message: `The user with ID ${req.user.id} has already made 1 appointments`});
     }
 
     const appointment = await Appointment.create(req.body);
