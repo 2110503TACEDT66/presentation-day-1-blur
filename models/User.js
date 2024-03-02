@@ -10,12 +10,12 @@ const UserSchema = new mongoose.Schema({
 
   tel: {
     type: String,
-    require: [true, "Please add an tel"],
+    required: [true, "Please add an telephone number"],
     unique: true,
     match: [
       /^0\d{2}[\s.-]?\d{3}[\s.-]?\d{4}$/,
-      "Please add a valid tel"
-    ]
+      "Please add a valid phone number format. Must start with 0 and be 10 digits long.",
+    ],
   },
   email: {
     type: String,
