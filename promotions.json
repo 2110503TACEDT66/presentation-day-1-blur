@@ -1,0 +1,227 @@
+[
+  {
+    "clinicName": "คลินิกยิ้มทันตกรรม (Smile Dental Clinic)",
+    "promotions": [
+      {
+        "name": "ฟอกสีฟันขาวใส เตรียมรับปีใหม่ (Sparkling Smile for New Year)",
+        "description": "ฟอกสีฟันด้วยเทคโนโลยี LED ล้ำสมัย ช่วยให้ฟันขาวสะอาด ไร้คราบพลัค (Whiten teeth with advanced LED technology for a brighter, cleaner smile.)",
+        "regularPrice": 5000,
+        "promotionalPrice": 2500,
+        "validFrom": "2024-12-01",
+        "validTo": "2025-01-31",
+        "termsAndConditions": "เฉพาะผู้จองคิวล่วงหน้า 7 วัน (For appointments booked 7 days in advance only.)",
+        "imageUrl": "https://pixabay.com/th/photos/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B8%B1%E0%B8%94%E0%B8%9F/"
+      },
+      {
+        "name": "อุดฟัน 1 แถม 1 (Buy 1 Get 1 Free Filling)",
+        "description": "อุดฟันด้วยวัสดุคุณภาพสูง ทนทาน ปลอดภัย (Fillings with high-quality, durable, and safe materials.)",
+        "regularPrice": 800,
+        "promotionalPrice": 400,
+        "validFrom": "2024-06-16",
+        "validTo": "2024-06-30",
+        "termsAndConditions": "ไม่รวมค่า X-ray (X-ray not included)",
+        "imageUrl": "https://www.istockphoto.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%9F%E0%B8%B1%E0%B8%99"
+      },
+      {
+        "name": "ขูดหินปูน ล้างฟัน เริ่มต้นเพียง 999 บาท (Scaling and Cleaning - Starting at Only 999 THB)",
+        "description": "ขูดหินปูน ล้างฟัน ตรวจสุขภาพช่องปาก โดยทันตแพทย์ผู้เชี่ยวชาญ (Scaling, cleaning, and oral health check-up by expert dentists.)",
+        "regularPrice": 1500,
+        "promotionalPrice": 999,
+        "validFrom": "2024-01-01",
+        "validTo": "2024-12-31",
+        "termsAndConditions": "เฉพาะผู้เข้ารับบริการครั้งแรก (For first-time patients only)",
+        "imageUrl": "https://www.dailynews.co.th/news/681542/"
+      }
+    ]
+  },
+  {
+    "clinicName": "คลินิกทันตกรรมรอยยิ้มสวย (Beautiful Smile Dental Clinic)",
+    "promotions": [
+      {
+        "name": "รอยยิ้มสดใสต้อนรับปีใหม่ ลด 20% ทุกบริการ (Brighten Your Smile for New Year - 20% Off All Services)",
+        "description": "ฉลองปีใหม่ด้วยรอยยิ้มที่สดใส รับส่วนลด 20% สำหรับทุกบริการทันตกรรมที่คลินิกของเรา (Celebrate the New Year with a brighter smile! Get 20% off all dental services at our clinic.)",
+        "regularPrice": null,
+        "promotionalPrice": null,
+        "validFrom": "2024-12-25",
+        "validTo": "2025-01-15",
+        "termsAndConditions": "ไม่รวมค่า X-ray และวัสดุพิเศษ (Excludes X-ray and special materials)",
+        "imageUrl": "https://www.freepik.com/th/photos-vetores-gratis/sorriso"
+      },
+      {
+        "name": "จัดฟันแบบใส เริ่มต้นเพียง 35,000 บาท (Clear Braces - Starting at Only 35,000 THB)",
+        "description": "ยิ้มอย่างมั่นใจด้วยการจัดฟันแบบใส แทบมองไม่เห็น เหมาะกับผู้ใหญ่ที่ต้องการจัดฟันโดยไม่ต้องกังวลเรื่องความสวยงาม (Smile confidently with clear braces that are virtually invisible. Perfect for adults who want to straighten their teeth without worrying about aesthetics.)",
+        "regularPrice": 45000,
+        "promotionalPrice": 35000,
+        "validFrom": "2024-03-08",
+        "validTo": "2024-05-31",
+        "termsAndConditions": "เฉพาะผู้จองคิวภายในเดือนมีนาคม 2567 เท่านั้น (For appointments booked within March 2024 only.)",
+        "imageUrl": "https://www.verywellhealth.com/th/invisible-braces-4177440"
+      },
+      {
+        "name": "ตรวจสุขภาพช่องปาก ฟรี! (Free Oral Health Check-up)",
+        "description": "รับการตรวจสุขภาพช่องปากโดยทันตแพทย์ผู้เชี่ยวชาญ ฟรี! ไม่มีค่าใช้จ่าย (Get a free oral health check-up by our expert dentists! No charges apply.)",
+        "regularPrice": 500,
+        "promotionalPrice": 0,
+        "validFrom": "2024-01-01",
+        "validTo": "2024-12-31",
+        "termsAndConditions": "จำกัด 1 สิทธิ์ต่อ 1 ท่าน (Limited to 1 privilege per person)",
+        "imageUrl": "https://www.dentalhealth.org/th/checkups"
+      }
+    ]
+  },
+  {
+    "clinicName": "คลินิกทันตกรรมรอยยิ้มสุข (Happy Smile Dental Clinic)",
+    "promotions": [
+      {
+        "name": "ยิ้มใสรับปีใหม่ ลด 15% ทุกบริการ",
+        "description": "ฉลองปีใหม่ด้วยรอยยิ้มที่สดใส รับส่วนลด 15% สำหรับทุกบริการทันตกรรมที่คลินิกของเรา",
+        "regularPrice": null,
+        "promotionalPrice": null,
+        "validFrom": "2024-12-25",
+        "validTo": "2025-01-15",
+        "termsAndConditions": "ไม่รวมค่า X-ray และวัสดุพิเศษ",
+        "imageUrl": "https://www.freepik.com/th/photos-vetores-gratis/sorriso"
+      },
+      {
+        "name": "จัดฟันแบบใส เริ่มต้นเพียง 30,000 บาท",
+        "description": "ยิ้มอย่างมั่นใจด้วยการจัดฟันแบบใส แทบมองไม่เห็น เหมาะกับผู้ใหญ่ที่ต้องการจัดฟันโดยไม่ต้องกังวลเรื่องความสวยงาม",
+        "regularPrice": 40000,
+        "promotionalPrice": 30000,
+        "validFrom": "2024-02-01",
+        "validTo": "2024-04-30",
+        "termsAndConditions": "เฉพาะผู้จองคิวภายในเดือนกุมภาพันธ์ 2567 เท่านั้น",
+        "imageUrl": "https://www.verywellhealth.com/th/invisible-braces-4177440"
+      },
+      {
+        "name": "ฟอกสีฟันขาวใส เตรียมรับสงกรานต์ (Sparkling Smile for Songkran)",
+        "description": "ฟอกสีฟันด้วยเทคโนโลยี LED ล้ำสมัย ช่วยให้ฟันขาวสะอาด ไร้คราบพลัค",
+        "regularPrice": 6000,
+        "promotionalPrice": 3000,
+        "validFrom": "2024-03-15",
+        "validTo": "2024-04-15",
+        "termsAndConditions": "เฉพาะผู้จองคิวล่วงหน้า 7 วัน",
+        "imageUrl": "https://pixabay.com/th/photos/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B8%B1%E0%B8%94%E0%B8%9F/"
+      },
+      {
+        "name": "อุดฟัน 2 แถม 1 (Buy 2 Get 1 Free Filling)",
+        "description": "อุดฟันด้วยวัสดุคุณภาพสูง ทนทาน ปลอดภัย",
+        "regularPrice": 800,
+        "promotionalPrice": 533,
+        "validFrom": "2024-05-01",
+        "validTo": "2024-05-31",
+        "termsAndConditions": "ไม่รวมค่า X-ray",
+        "imageUrl": "https://www.istockphoto.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%9F%E0%B8%B1%E0%B8%99"
+      }
+    ]
+  },
+  {
+    "clinicName": "คลินิกทันตกรรมรอยยิ้มสดใส (Bright Smile Dental Clinic)",
+    "promotions": [
+      {
+        "name": "สุขภาพช่องปากดี เริ่มต้นเพียง 999 บาท",
+        "description": "ตรวจสุขภาพช่องปาก ขูดหินปูน ล้างฟัน เคลือบฟลูออไรด์ โดยทันตแพทย์ผู้เชี่ยวชาญ",
+        "regularPrice": 1500,
+        "promotionalPrice": 999,
+        "validFrom": "2024-03-08",
+        "validTo": "2024-05-31",
+        "termsAndConditions": "เฉพาะผู้จองคิวภายในเดือนมีนาคม 2567 เท่านั้น",
+        "imageUrl": "https://www.dentalhealth.org/th/checkups"
+      },
+      {
+        "name": "รอยยิ้มใหม่รับปีใหม่ ลด 25% ทุกบริการ",
+        "description": "ฉลองปีใหม่ด้วยรอยยิ้มที่สดใส รับส่วนลด 25% สำหรับทุกบริการทันตกรรมที่คลินิกของเรา",
+        "regularPrice": null,
+        "promotionalPrice": null,
+        "validFrom": "2024-12-25",
+        "validTo": "2025-01-15",
+        "termsAndConditions": "ไม่รวมค่า X-ray และวัสดุพิเศษ",
+        "imageUrl": "https://www.freepik.com/th/photos-vetores-gratis/sorriso"
+      },
+      {
+        "name": "จัดฟันแบบใส เริ่มต้นเพียง 25,000 บาท",
+        "description": "ยิ้มอย่างมั่นใจด้วยการจัดฟันแบบใส แทบมองไม่เห็น เหมาะกับผู้ใหญ่ที่ต้องการจัดฟันโดยไม่ต้องกังวลเรื่องความสวยงาม",
+        "regularPrice": 40000,
+        "promotionalPrice": 25000,
+        "validFrom": "2024-04-01",
+        "validTo": "2024-06-30",
+        "termsAndConditions": "เฉพาะผู้จองคิวภายในเดือนเมษายน 2567 เท่านั้น",
+        "imageUrl": "https://www.verywellhealth.com/th/invisible-braces-4177440"
+      },
+      {
+        "name": "ฟอกสีฟันขาวใส เตรียมรับสงกรานต์ (Sparkling Smile for Songkran)",
+        "description": "ฟอกสีฟันด้วยเทคโนโลยี LED ล้ำสมัย ช่วยให้ฟันขาวสะอาด ไร้คราบพลัค",
+        "regularPrice": 6000,
+        "promotionalPrice": 3500,
+        "validFrom": "2024-03-15",
+        "validTo": "2024-04-15",
+        "termsAndConditions": "เฉพาะผู้จองคิวล่วงหน้า 7 วัน",
+        "imageUrl": "https://pixabay.com/th/photos/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B8%B1%E0%B8%94%E0%B8%9F/"
+      },
+      {
+        "name": "ขูดหินปูน ล้างฟัน เริ่มต้นเพียง 1,299 บาท",
+        "description": "ขูดหินปูน ล้างฟัน ตรวจสุขภาพช่องปาก โดยทันตแพทย์ผู้เชี่ยวชาญ",
+        "regularPrice": 1800,
+        "promotionalPrice": 1299,
+        "validFrom": "2024-07-01",
+        "validTo": "2024-08-31",
+        "termsAndConditions": "ไม่รวมค่า X-ray",
+        "imageUrl": "https://www.istockphoto.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%9F%E0%B8%B1%E0%B8%99"
+      }
+    ]
+  },
+  {
+    "clinicName": "คลินิกทันตกรรมรอยยิ้มสุขภาพดี (Healthy Smile Dental Clinic)",
+    "promotions": [
+      {
+        "name": "ตรวจสุขภาพช่องปาก ฟรี!",
+        "description": "รับการตรวจสุขภาพช่องปากโดยทันตแพทย์ผู้เชี่ยวชาญ ฟรี! ไม่มีค่าใช้จ่าย",
+        "regularPrice": 500,
+        "promotionalPrice": 0,
+        "validFrom": "2024-01-01",
+        "validTo": "2024-12-31",
+        "termsAndConditions": "จำกัด 1 สิทธิ์ต่อ 1 ท่าน",
+        "imageUrl": "https://www.dentalhealth.org/th/checkups"
+      },
+      {
+        "name": "รอยยิ้มใหม่รับปีใหม่ ลด 25% ทุกบริการ",
+        "description": "ฉลองปีใหม่ด้วยรอยยิ้มที่สดใส รับส่วนลด 25% สำหรับทุกบริการทันตกรรมที่คลินิกของเรา",
+        "regularPrice": null,
+        "promotionalPrice": null,
+        "validFrom": "2024-12-25",
+        "validTo": "2025-01-15",
+        "termsAndConditions": "ไม่รวมค่า X-ray และวัสดุพิเศษ",
+        "imageUrl": "https://www.freepik.com/th/photos-vetores-gratis/sorriso"
+      },
+      {
+        "name": "จัดฟันแบบใส เริ่มต้นเพียง 30,000 บาท",
+        "description": "ยิ้มอย่างมั่นใจด้วยการจัดฟันแบบใส แทบมองไม่เห็น เหมาะกับผู้ใหญ่ที่ต้องการจัดฟันโดยไม่ต้องกังวลเรื่องความสวยงาม",
+        "regularPrice": 40000,
+        "promotionalPrice": 30000,
+        "validFrom": "2024-02-01",
+        "validTo": "2024-04-30",
+        "termsAndConditions": "เฉพาะผู้จองคิวภายในเดือนกุมภาพันธ์ 2567 เท่านั้น",
+        "imageUrl": "https://www.verywellhealth.com/th/invisible-braces-4177440"
+      },
+      {
+        "name": "ฟอกสีฟันขาวใส เตรียมรับสงกรานต์ (Sparkling Smile for Songkran)",
+        "description": "ฟอกสีฟันด้วยเทคโนโลยี LED ล้ำสมัย ช่วยให้ฟันขาวสะอาด ไร้คราบพลัค",
+        "regularPrice": 6000,
+        "promotionalPrice": 3000,
+        "validFrom": "2024-03-15",
+        "validTo": "2024-04-15",
+        "termsAndConditions": "เฉพาะผู้จองคิวล่วงหน้า 7 วัน",
+        "imageUrl": "https://pixabay.com/th/photos/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B8%B1%E0%B8%94%E0%B8%9F/"
+      },
+      {
+        "name": "อุดฟัน 2 แถม 1 (Buy 2 Get 1 Free Filling)",
+        "description": "อุดฟันด้วยวัสดุคุณภาพสูง ทนทาน ปลอดภัย",
+        "regularPrice": 800,
+        "promotionalPrice": 533,
+        "validFrom": "2024-05-01",
+        "validTo": "2024-05-31",
+        "termsAndConditions": "ไม่รวมค่า X-ray",
+        "imageUrl": "https://pixabay.com/th/photos/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B8%B1%E0%B8%94%E0%B8%9F/"
+      }
+    ]
+  }
+]
