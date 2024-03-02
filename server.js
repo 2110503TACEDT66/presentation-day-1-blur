@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv') ;
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
+
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const {xss} = require('express-xss-sanitizer');
@@ -16,6 +17,7 @@ dotenv.config ({path:'./config/config.env'});
 const dentists = require('./routes/dentists');
 const auth = require('./routes/auth');
 const appointments = require('./routes/appointments');
+const article = require('./routes/article');
 
 
 connectDB();
@@ -53,6 +55,7 @@ app.use(hpp());
 app.use('/api/v1/dentists', dentists);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/appointments', appointments);
+app.use('/api/v1/article', article);
 
 const PORT=process.env.PORT || 5000;
 
