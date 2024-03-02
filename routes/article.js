@@ -1,15 +1,20 @@
 const express = require("express");
 const {
   getArticles,
-  getArticle
+  getArticle,
+  createArticle,
+  updateArticle,
+  deleteArticle
 } = require("../controllers/article");
 
 const router = express.Router();
 
-//const {protect, authorize} = require('../middleware/auth');
+router.route("/").get(getArticles).post(createArticle);
 
-router.route("/").get(getArticles);
-
-router.route("/:id").get(getArticle);
+router
+  .route("/:id")
+  .get(getArticle)
+  .put(updateArticle)
+  .delete(deleteArticle);
 
 module.exports = router;
