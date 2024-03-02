@@ -4,4 +4,3 @@ node_modules/*
 #ignore,config,file
 config/config.env
 
-.DS_Store

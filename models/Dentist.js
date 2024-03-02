@@ -1,3 +1,4 @@
+const { Int32 } = require("mongodb");
 const mongoose = require("mongoose");
 
 const DentistSchema = new mongoose.Schema(
@@ -11,8 +12,9 @@ const DentistSchema = new mongoose.Schema(
       maxlength: [50, "Name can not be more than 50 characters"],
     },
     yearsOfExperience: {
-      type: Number,
+      type: Int32,
       required: [true, "Please add the years of experience"],
+      max: 50, // กำหนดค่าสูงสุด
     },
     areaOfExpertise: {
       type: String,
