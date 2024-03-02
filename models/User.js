@@ -12,12 +12,11 @@ const UserSchema = new mongoose.Schema({
     type: String,
     validate: {
       validator: (value) => {
-        // Regular expression to match phone numbers starting with 0, followed by 7 to 10 digits
-        const regex = /^0\d{7,10}$/;
+        const regex = /^0\d{2}[\s.-]?\d{3}[\s.-]?\d{4}$/;
         return regex.test(value);
       },
       message:
-        "Invalid phone number format. Must start with 0 and be 8-11 digits long.",
+        "Invalid phone number format. Must start with 0 and be 10 digits long.",
     },
   },
   email: {
