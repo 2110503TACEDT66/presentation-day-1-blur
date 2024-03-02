@@ -69,4 +69,4 @@ const dentalPromotionSchema = new mongoose.Schema({
   ],
 });
 
-module.exports = mongoose.model("DentalPromotion", dentalPromotionSchema);
+module.exports = mongoose.model("Promotion", dentalPromotionSchema);

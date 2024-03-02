@@ -13,10 +13,6 @@ const ClinicSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  url: {
-    type: String,
-    required: true,
-  },
   service: [
     {
       type: mongoose.Schema.Types.Mixed,
