@@ -15,6 +15,7 @@ const DentistSchema = new mongoose.Schema(
       type: Number,
       required: [true, "Please add the years of experience"],
       max: 50, // กำหนดค่าสูงสุด
+      min:1,
     },
     areaOfExpertise: {
       type: String,
