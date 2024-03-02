@@ -18,6 +18,9 @@ const auth = require("./routes/auth");
 const appointments = require("./routes/appointments");
 const article = require("./routes/article");
 const promotions = require("./routes/promotions");
+const payments = require("./routes/payment");
+const clinics = require("./routes/clinics");
+
 connectDB();
 
 const app = express();
@@ -51,6 +54,8 @@ app.use("/api/v1/auth", auth);
 app.use("/api/v1/appointments", appointments);
 app.use("/api/v1/article", article);
 app.use("/api/v1/promotions", promotions);
+app.use("/api/v1/payment", payments);
+app.use("/api/v1/clinics", clinics);
 
 const PORT = process.env.PORT || 5000;
 

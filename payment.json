@@ -1,0 +1,42 @@
+[{
+  "amount": 100.5,
+  "currency": "USD",
+  "paymentMethod": "Credit Card",
+  "paymentDate": "2024-03-05T00:00:00.000Z",
+  "appointment": "63c548222584858482258486"
+},
+{
+  "amount": 25.99,
+  "currency": "USD",
+  "paymentMethod": "Debit Card",
+  "paymentDate": "2024-03-06T09:00:00.000Z",
+  "appointment": "63c548222584858482258486" 
+}
+,
+{
+  "amount": 1000.00,
+  "currency": "THB",
+  "paymentMethod": "Credit Card",
+  "paymentDate": "2024-03-07T15:00:00.000Z",
+  "appointment": "63c548222584858482258487", 
+  "status": "pending" 
+}
+,
+{
+  "amount": 2000.00,
+  "currency": "USD",
+  "paymentMethod": "Cash",
+  "paymentDate": "2024-03-08T18:00:00.000Z",
+  "appointment": null,
+  "transactionId": "1234567890" 
+},
+{
+  "amount": 500.00,
+  "currency": "THB",
+  "paymentMethod": "Credit Card",
+  "paymentDate": "2024-03-09T21:00:00.000Z",
+  "appointment": "63c548222584858482258488", 
+  "status": "cancelled" 
+}
+
+]
