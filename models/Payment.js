@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+
 const PaymentSchema = new mongoose.Schema({
   // Information about the payment
   amount: {
