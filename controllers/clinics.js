@@ -29,3 +29,50 @@ exports.getClinic = async (req, res, next) => {
     res.status(400).json({ success: false });
   }
 };
+exports.createClinic = async (req, res, next) => {
+  const clinic = await Clinic.create(req.body);
+  res.status(201).json({
+    success: true,
+    data: clinic
+  });
+};
+
+// @desc    Update clinic
+// @route   PUT /api/v1/clinics/:id
+// @access  Private
+exports.updateClinic = async (req, res, next) => {
+  try {
+    const clinic = await Clinic.findByIdAndUpdate(req.params.id, req.body, {
+      new : true,
+      runValidators: true
+    });
+
+    if(!clinic){
+      return res.status(400).json({success:false});
+
+    }
+    res.status(200).json({success:true, data : clinic});
+
+  } catch (error) {
+    res.status(400).json({success:false});
+  }
+
+};
+
+// @desc    Delete clinic
+// @route   DELETE /api/v1/clinics/:id
+// @access  Private
+exports.deleteClinic = async (req, res, next) => {
+  try {
+    const clinic = await Clinic.findByIdAndDelete(req.params.id);
+
+    if(!clinic){
+      return res.status(400).json({success: false});
+    }
+
+    res.status(200).json({success: true, data : {}});
+
+  } catch (error) {
+    res.status(400).json({success:false});
+  }
+};
