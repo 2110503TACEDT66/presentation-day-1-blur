@@ -1,44 +1,68 @@
 const Appointment  = require('../models/Appointment'); // require ติดต่อผ่านฐานข้อมูล
 const Dentists = require('../models/Dentist');
-
+const Clinic = require("../models/Clinic");
 
 //@desc Get all appointments
 //@route GET/api/v1/appointments
 //@access Private
-exports.getAppointments =async(req, res, next) => {
+
+exports.getAppointments = async (req, res, next) => {
+  try {
     let query;
-    if(req.user.role !== 'admin'){ //General users can see only their appointments!\
-      query = Appointment.find({user:req.user.id}).populate({
-        path:'dentist',
-        select:'name yearsOfExperience areaOfExpertise'
-      });
-    }else{// If you are an admin, you can see all appointment!
-      if(req.params.dentistId){
+
+    if (req.user.role !== "admin") {
+      // General user: Only see their appointments and populate clinic and dentist
+      query = Appointment.find({ user: req.user.id })
+        .populate({
+          path: "dentist",
+          select: "name yearsOfExperience areaOfExpertise",
+        })
+        .populate({
+          path: "clinic",
+          select: "name address",
+        });
+    } else {
+      // Admin: Control based on dentist ID parameter
+      if (req.params.dentistId) {
         console.log(req.params.dentistId);
-        query = Appointment.find({dentist:req.params.dentistId}).populate({
-          path:"dentist",
-          select:"name yearsOfExperience areaOfExpertise",
-        });
-      }else{
-        query = Appointment.find().populate({
-          path:'dentist',
-          select:'name yearsOfExperience areaOfExpertise'
-        });
-      } 
-    }
-    try {
-      const appointments = await query;
-      res.status(200).json({
-        success : true,
-        const : appointments.length,
-        data:appointments
-      });
-    } catch (error) {
-        console.log(error); //err.stack
-        return res.status(500).json({success:false, message: "Cannot find Appointment"});
+        query = Appointment.find({ dentist: req.params.dentistId })
+          .populate({
+            path: "dentist",
+            select: "name yearsOfExperience areaOfExpertise",
+          })
+          .populate({
+            path: "clinic",
+            select: "name address",
+          });
+      } else {
+        // Admin: All appointments, populate clinic and dentist
+        query = Appointment.find()
+          .populate({
+            path: "dentist",
+            select: "name yearsOfExperience areaOfExpertise",
+          })
+          .populate({
+            path: "clinic",
+            select: "name address",
+          });
+      }
     }
 
-}
+    const appointments = await query.exec(); // Execute the query asynchronously
+
+    res.status(200).json({
+      success: true,
+      count: appointments.length, // Use count instead of "const" which is a reserved keyword
+      data: appointments,
+    });
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ success: false, message: "Error fetching appointments" });
+  }
+};
+
 
 //@desc Get single appointment
 //@route GET /api/appointments/:id

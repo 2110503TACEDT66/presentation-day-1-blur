@@ -12,11 +12,13 @@ const dentalPromotionSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
+        minlength: 3, // Enforce a minimum length for promotion names
       },
       description: {
         type: String,
         required: true,
         trim: true,
+        minlength: 10, // Enforce a minimum length for descriptions
       },
       regularPrice: {
         type: Number,
@@ -37,6 +39,7 @@ const dentalPromotionSchema = new mongoose.Schema({
       validFrom: {
         type: Date,
         required: true,
+        get: (v) => v.toISOString().split("T")[0], // Format validFrom date for easier display (optional)
       },
       validTo: {
         type: Date,
@@ -47,6 +50,7 @@ const dentalPromotionSchema = new mongoose.Schema({
           },
           message: "Valid To date must be after Valid From date",
         },
+        get: (v) => v.toISOString().split("T")[0], // Format validTo date for easier display (optional)
       },
       termsAndConditions: {
         type: String,
@@ -54,9 +58,10 @@ const dentalPromotionSchema = new mongoose.Schema({
       },
       imageUrl: {
         type: String,
+        required: true,
+        trim: true,
         validate: {
           validator: function (value) {
-            // Basic URL validation using regular expression
             const urlRegex =
               /^(http:\/\/|https:\/\/)?www\.[a-zA-Z0-9]+\.[a-z]{2,5}$/;
             return urlRegex.test(value);
@@ -69,4 +74,4 @@ const dentalPromotionSchema = new mongoose.Schema({
   ],
 });
 
-module.exports = mongoose.model("DentalPromotion", dentalPromotionSchema);
+module.exports = mongoose.model("Promotion", dentalPromotionSchema);
