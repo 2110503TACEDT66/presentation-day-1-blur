@@ -69,9 +69,13 @@ exports.getAppointments = async (req, res, next) => {
 //@access Public
 exports.getAppointment = async(req, res, next) => {
   try {
-    const appointment = await Appointment.findById(req.params.id).populate({
+    const appointment = await Appointment.findById(req.params.id)
+    .populate({
       path: 'dentist',
       select: 'name description tel'
+    }).populate({
+      path: "clinic",
+      select: "name address",
     });
     if(!appointment){
       return res.status(404).json({success:false, message: `No appointment with the id of ${req.params.id}`});
