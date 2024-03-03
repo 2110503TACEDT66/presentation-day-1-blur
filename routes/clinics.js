@@ -1,5 +1,5 @@
 const express = require("express");
-const { getClinics, getClinic, addClinic, createClinic, updateClinic, deleteClinic } = require("../controllers/clinics");
+const { getClinics, getClinic, createClinic, updateClinic, deleteClinic } = require("../controllers/clinics");
 
 const router = express.Router();
 const { protect, authorize } = require("../middleware/auth");

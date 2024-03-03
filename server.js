@@ -16,7 +16,7 @@ dotenv.config({ path: "./config/config.env" });
 const dentists = require("./routes/dentists");
 const auth = require("./routes/auth");
 const appointments = require("./routes/appointments");
-const article = require("./routes/article");
+const article = require("./routes/articles");
 const promotions = require("./routes/promotions");
 const payments = require("./routes/payment");
 const clinics = require("./routes/clinics");
@@ -56,7 +56,7 @@ app.use("/api/v1/article", article);
 app.use("/api/v1/promotions", promotions);
 app.use("/api/v1/payment", payments);
 app.use("/api/v1/clinics", clinics);
-
+  
 const PORT = process.env.PORT || 5000;
 
 const server = app.listen(
