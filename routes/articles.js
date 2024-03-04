@@ -20,3 +20,4 @@ router
   .delete(protect,authorize('admin') ,deleteArticle);
 
 module.exports = router;
+

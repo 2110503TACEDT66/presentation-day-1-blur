@@ -1,4 +1,3 @@
-
 const Payment = require('../models/Payment.js');
 // @desc    Get all payments
 // @route   GET /api/v1/payments

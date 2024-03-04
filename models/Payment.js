@@ -38,6 +38,16 @@ const PaymentSchema = new mongoose.Schema({
     type: String,
     unique: true, // Ensure unique transaction IDs (optional)
   },
+  imageUrl: {
+    type: String,
+    validate: {
+      validator: (url) => {
+        // Add validation logic for valid image URLs (e.g., using a regular expression)
+        return true; // Replace with your validation logic
+      },
+      message: (props) => `${props.value} is not a valid image URL`,
+    },
+  },
 });
 
 module.exports = mongoose.model("Payment", PaymentSchema);

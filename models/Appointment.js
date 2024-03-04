@@ -24,7 +24,6 @@ const AppointmentSchema = new mongoose.Schema({
     ref: "Clinic",
     required: true, // Adjust as needed
   },
-
   duration: {
     // Adjust data type based on your needs (e.g., Number, String)
     type: Number, // Example: duration in minutes
