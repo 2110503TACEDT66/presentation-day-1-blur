@@ -21,6 +21,16 @@ const DentistSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please specify the area of expertise"],
     },
+    imageUrl: {
+      type: String,
+      validate: {
+        validator: (url) => {
+          // Add validation logic for valid image URLs (e.g., using a regular expression)
+          return true; // Replace with your validation logic
+        },
+        message: (props) => `${props.value} is not a valid image URL`,
+      },
+    },
   },
   {
     toJSON: { virtuals: true },

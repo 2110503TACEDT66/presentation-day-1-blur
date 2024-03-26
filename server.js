@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
+const cors = require("cors");
 
 const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
@@ -24,6 +25,7 @@ const clinics = require("./routes/clinics");
 connectDB();
 
 const app = express();
+app.use(cors());
 //add cookie parser
 app.use(cookieParser());
 
