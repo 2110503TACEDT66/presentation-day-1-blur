@@ -11,7 +11,7 @@ const rateLimit = require("express-rate-limit");
 const hpp = require("hpp");
 
 // Load env vars
-dotenv.config({ path: "./config/config.env" });
+// dotenv.config({ path: "./config/config.env" });
 
 //Route file
 const dentists = require("./routes/dentists");
